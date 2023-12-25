@@ -1,6 +1,8 @@
 package secondTask;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Main {
@@ -14,17 +16,16 @@ public class Main {
         System.out.print("Put the second line - ");
         String secondLine = scanner.nextLine();
 
-        ArrayList<Integer> numbersOfFirstLine = new ArrayList<>();
-        for (String s : firstLine.split("\\s")) {
-            numbersOfFirstLine.add(Integer.parseInt(s));
-        }
+        String[] line1 = firstLine.split(" ");
+        String[] line2 = secondLine.split(" ");
 
-        ArrayList<Integer> numbersOfSecondLine = new ArrayList<>();
-        for (String s : secondLine.split("\\s")) {
-            numbersOfSecondLine.add(Integer.parseInt(s));
-        }
+        HashSet<String> numbers = new HashSet<>();
+        numbers.addAll(Arrays.asList(line1));
+        numbers.addAll(Arrays.asList(line2));
 
-        System.out.println(numbersOfFirstLine);
-        System.out.println(numbersOfSecondLine);
+        System.out.println(numbers);
+
+
+
     }
 }
