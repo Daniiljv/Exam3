@@ -24,7 +24,7 @@ public class Main {
         String word = scanner.nextLine();
 
         if(dictionary.containsKey(word)){
-            System.out.println(dictionary.containsValue(word));
+            System.out.println(dictionary.get(word));
         }
         else{
             System.out.println("There is no word like this");
